@@ -1,9 +1,4 @@
 id: setup_docker_generic
-title: Setting up your local environment with Anythink
-description: |-
-  It’s time to set up your development environment.
-  Your manager will help you set up Docker locally, which will make it much easier to run our system and all its dependencies.
-actionurl: "/chat"
 hints:
 - Read through the Docker installation guide thoroughly and make sure you didn't miss
   any steps.
@@ -12,8 +7,6 @@ hints:
   menu and then choose Quick Start Guide.
 - Make sure you ran the \`docker-compose up\` command from the **project root directory**
   and that it finished running. This may take a few moments.
-isGeneric: true
-startBot: head-of-rd
 startFlow:
   do:
   - actionId: bot_message

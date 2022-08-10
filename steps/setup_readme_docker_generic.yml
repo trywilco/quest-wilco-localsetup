@@ -1,15 +1,7 @@
 id: setup_readme_docker_generic
-title: Read me
-description: |-
-  You’re doing great! Now let's make sure others can follow in your footsteps and set up their environment easily. It’s time to update the readme file!
-
-  Your predecessor wrote a readme file,  which you can find in the root directory in the repository and under frontend and backend directories, but it’s far from perfect.  Let’s add our own contribution to it! . <a target="_blank" href="https://trywilco.notion.site/Simulation-1-Onboarding-6cba03fcdaf148a581e367b48b812997">Also, if you need to read more about this topic - we got you covered</a>
-actionurl: "/chat"
 hints:
 - Take a look at our repository's readme, it's missing some instructions for local
   setup
-isGeneric: true
-startBot: head-of-rd
 startFlow:
   do:
   - actionId: bot_message

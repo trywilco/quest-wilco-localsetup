@@ -1,13 +1,7 @@
 id: setup_frontend_docker_generic
-title: Frontend setup
-description: Let’s make sure the frontend works locally on port 3001 and connect to
-  the local backend.
-actionurl: "/chat"
 hints:
 - run `docker-compose up` from the root directory
 - make sure the network requests in the client are complete ok using the network tab.
-isGeneric: true
-startBot: head-of-rd
 startFlow:
   do:
   - actionId: bot_message

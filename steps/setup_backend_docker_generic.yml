@@ -1,15 +1,7 @@
 id: setup_backend_docker_generic
-title: Backend setup
-description: |-
-  Let’s make sure you’re able to run the backend locally and connect to the DB.
-
-  In this dib, you'll make the backend system work locally and connect it to the database using the docker command we’ve configured before.
-actionurl: "/chat"
 hints:
 - Pssst - you can run `docker-compose up` from the root directory
 - run `docker exec -it <container-name> sh` to access a container from the terminal.
-isGeneric: true
-startBot: head-of-rd
 startFlow:
   do:
   - actionId: bot_message
