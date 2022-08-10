@@ -1,0 +1,86 @@
+id: setup_readme_docker_generic
+title: Read me
+description: |-
+  You’re doing great! Now let's make sure others can follow in your footsteps and set up their environment easily. It’s time to update the readme file!
+
+  Your predecessor wrote a readme file,  which you can find in the root directory in the repository and under frontend and backend directories, but it’s far from perfect.  Let’s add our own contribution to it! . <a target="_blank" href="https://trywilco.notion.site/Simulation-1-Onboarding-6cba03fcdaf148a581e367b48b812997">Also, if you need to read more about this topic - we got you covered</a>
+actionurl: "/chat"
+hints:
+- Take a look at our repository's readme, it's missing some instructions for local
+  setup
+isGeneric: true
+startBot: head-of-rd
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: head-of-rd
+      messages:
+      - text: "It looks like your environment is ready! \U0001F600"
+        delay: 1000
+      - text: To make this process easier for future employees, **lets update the
+          readme file** and add instructions for setting up a local environment like
+          you just did, and **submit a PR.**
+        delay: 2700
+trigger:
+  type: github_pr_lifecycle_status
+  flowNode:
+    switch:
+      key: "${githubPrLifecycleStatus}"
+      cases:
+        github_pr_opened:
+          do:
+          - actionId: github_pr_comment
+            params:
+              person: head-of-rd
+              message: Thanks @${user.githubuser}, I'll review the changes right away.
+        github_pr_workflow_complete_success:
+          if:
+            conditions:
+            - conditionId: github_is_one_of_files_modified
+              params:
+                defaultResult: false
+                fileNames:
+                - backend/readme.md
+                - frontend/readme.md
+                - readme.md
+            then:
+              do:
+              - actionId: bot_message
+                params:
+                  person: head-of-rd
+                  messages:
+                  - text: "Awesome! Thanks so much for taking the time to make the
+                      setup experience a little smoother. Hopefully, new engineers
+                      will now have a much easier time\U0001F31F."
+                    delay: 1500
+                  - text: Now, all that’s left is to **merge this PR** and the next
+                      item will be ready for you in Snack.
+                    delay: 4000
+              - actionId: github_pr_approve
+                params:
+                  person: head-of-rd
+                  message: "Awesome! Thanks so much for taking the time to make the
+                    setup experience a little smoother. Hopefully, new engineers will
+                    now have a much easier time\U0001F31F.\nNow, all that’s left is
+                    to merge this PR and the next item will be ready for you in Snack."
+            else:
+              do:
+              - actionId: bot_message
+                params:
+                  person: head-of-rd
+                  messages:
+                  - text: It looks like we still have some problems.
+                    delay: 3000
+                  - text: To make it easier for new engineers, is there a way you
+                      can make the readme file a bit more friendly?
+                    delay: 2700
+              - actionId: github_pr_reject
+                params:
+                  person: head-of-rd
+                  message: It looks like we still have some problems. <br>To make
+                    it easier for new engineers, is there a way you can make the readme
+                    file a bit more friendly?
+        github_pr_merged:
+          do:
+          - actionId: finish_step

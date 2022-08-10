@@ -1,0 +1,51 @@
+id: setup_frontend_docker_generic
+title: Frontend setup
+description: Let’s make sure the frontend works locally on port 3001 and connect to
+  the local backend.
+actionurl: "/chat"
+hints:
+- run `docker-compose up` from the root directory
+- make sure the network requests in the client are complete ok using the network tab.
+isGeneric: true
+startBot: head-of-rd
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: head-of-rd
+      messages:
+      - text: Now, it’s time to **check the frontend** and make sure it’s **connected
+          to the backend**.
+        delay: 2500
+      - text: If everything is working properly, you’ll be able to **create a new
+          user** on http://localhost:3001/register
+        delay: 3800
+      - text: Create one (choose a cool nickname and everything) and you’ll be able
+          to move to the next task.
+        delay: 2000
+trigger:
+  type: local_page_load
+  flowNode:
+    if:
+      conditions:
+      - conditionId: text_match_regex
+        params:
+          text: "${path}"
+          regex: "^/@"
+      then:
+        do:
+        - actionId: bot_message
+          params:
+            person: head-of-rd
+            messages:
+            - text: Ooohh, I didn’t expect you to do this so quickly! Even your username,
+                ${path.slice(2)}, brings back memories. Strangely enough, they’re
+                your memories, which I don’t know why I have.
+              delay: 2000
+            - text: Never mind that, though—you’re done with this dib.
+              delay: 4300
+            - text: Just make sure that you **run all scripts in the next quests on
+                one of the containers** created by \`docker-compose up\`.  Also, **you
+                can use \`docker exec\` to run commands** on a running container.
+              delay: 2400
+        - actionId: finish_step
