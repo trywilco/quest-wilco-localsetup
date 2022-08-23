@@ -11,7 +11,7 @@ summary: |-
 slogan: Does it work on your machine?
 duration: 1
 questDependency: onboarding
-simulations:
+steps:
 - setup_docker_generic
 - setup_docker_continue_generic
 - setup_backend_docker_generic
