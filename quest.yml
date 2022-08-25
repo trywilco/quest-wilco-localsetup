@@ -1,3 +1,4 @@
+id: docker_localsetup
 title: Setup
 description: Your tools are lying before you; it’s time to see if they’re sharp and
   ready for work. We’ll set up a local environment, verify that its backend and frontend
