@@ -13,6 +13,7 @@ summary: |-
 slogan: Does it work on your machine?
 duration: 1
 questDependency: onboarding
+solutionBranch: quest_solution/docker_localsetup
 steps:
 - setup_docker_generic
 - setup_docker_continue_generic
