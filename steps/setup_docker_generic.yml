@@ -26,7 +26,9 @@ startFlow:
       - text: Just **let me know once you’re ready** to start your first task!
         delay: 5000
 trigger:
-  type: user_message_to_head-of-rd
+  type: user_message
+  params:
+    person: head-of-rd
   flowNode:
     if:
       conditions:

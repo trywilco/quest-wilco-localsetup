@@ -9,7 +9,9 @@ hints:
   and that it finished running. This may take a few moments.
 startFlow:
 trigger:
-  type: user_message_to_head-of-rd
+  type: user_message
+  params:
+    person: head-of-rd
   flowNode:
     if:
       conditions:
