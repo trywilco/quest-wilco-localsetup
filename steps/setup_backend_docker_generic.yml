@@ -3,16 +3,33 @@ hints:
 - Pssst - you can run `docker-compose up` from the root directory
 - run `docker exec -it <container-name> sh` to access a container from the terminal.
 startFlow:
-  do:
-  - actionId: bot_message
-    params:
-      person: head-of-rd
-      messages:
-      - text: If Docker is working correctly, the backend should be running and able
-          to connect to your local database.
-        delay: 2000
-      - text: Let's test this by **pointing your browser** to http://localhost:3000/api/ping
-        delay: 1000
+  if:
+    conditions:
+    - conditionId: user_has_feature_flag
+      params:
+        featureFlag: 'codespaces'
+    then:
+      do:
+      - actionId: bot_message
+        params:
+          person: head-of-rd
+          messages:
+          - text: If Docker is working correctly, the backend should be running and able
+              to connect to your local database.
+            delay: 2000
+          - text: Let's test this by **pointing your browser** to https://${user.codespace.name}-3000.githubpreview.dev/api/ping
+            delay: 1000
+    else:
+      do:
+      - actionId: bot_message
+        params:
+          person: head-of-rd
+          messages:
+          - text: If Docker is working correctly, the backend should be running and able
+              to connect to your local database.
+            delay: 2000
+          - text: Let's test this by **pointing your browser** to http://localhost:3000/api/ping
+            delay: 1000
 trigger:
   type: ping
   flowNode:
