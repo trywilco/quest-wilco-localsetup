@@ -9,13 +9,13 @@ hints:
   and that it finished running. This may take a few moments.
 startFlow:
 trigger:
-  type: user_message
-  params:
-    person: head-of-rd
+  type: github_codespace_added_to_user
   flowNode:
     if:
       conditions:
-      - conditionId: is_user_message_text_ready_to_continue
+      - conditionId: user_has_feature_flag
+        params:
+          featureFlag: 'codespaces'
       then:
         do:
         - actionId: bot_message
@@ -23,20 +23,47 @@ trigger:
             person: head-of-rd
             messages:
             - text: |-
-                Great! You can verify docker is ready by running the following commands in your terminal: \`docker -v\` and \`docker-compose -v\`.
-                Then, **run \`docker-compose up\` from the project root directory** to load Anythink's backend and frontend.
+                Great! Looks like your codespace is up and running. You can now
+                **run \`docker-compose up\` in your codespace's terminal** to load Anythink's backend and frontend.
               delay: 3000
-            - text: Ok. That’s a great first step - now we can make sure that the
-                code is working :)
-              delay: 2000
         - actionId: finish_step
-      else:
+trigger:
+  type: user_message
+  params:
+    person: head-of-rd
+  flowNode:
+    if:
+      conditions:
+      - conditionId: user_has_feature_flag
+        equals: false
+        params:
+          featureFlag: 'codespaces'
+      then:
         do:
-        - actionId: bot_message
-          params:
-            person: head-of-rd
-            messages:
-            - text: Umm, If you need any help, just let me know that you’re stuck.
-                If that’s not the case - take your time and tell me once you're ready
-                :)
-              delay: 2000
+          if:
+            conditions:
+            - conditionId: is_user_message_text_ready_to_continue
+            then:
+              do:
+              - actionId: bot_message
+                params:
+                  person: head-of-rd
+                  messages:
+                  - text: |-
+                      Great! You can verify docker is ready by running the following commands in your terminal: \`docker -v\` and \`docker-compose -v\`.
+                      Then, **run \`docker-compose up\` from the project root directory** to load Anythink's backend and frontend.
+                    delay: 3000
+                  - text: Ok. That’s a great first step - now we can make sure that the
+                      code is working :)
+                    delay: 2000
+              - actionId: finish_step
+            else:
+              do:
+              - actionId: bot_message
+                params:
+                  person: head-of-rd
+                  messages:
+                  - text: Umm, If you need any help, just let me know that you’re stuck.
+                      If that’s not the case - take your time and tell me once you're ready
+                      :)
+                    delay: 2000
