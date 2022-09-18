@@ -8,9 +8,7 @@ hints:
 - Make sure you ran the \`docker-compose up\` command from the **project root directory**
   and that it finished running. This may take a few moments.
 startFlow:
-trigger:
-  type: github_codespace_started
-  flowNode:
+  do:
     if:
       conditions:
       - conditionId: user_has_feature_flag
@@ -18,14 +16,6 @@ trigger:
           featureFlag: 'codespaces'
       then:
         do:
-        - actionId: bot_message
-          params:
-            person: head-of-rd
-            messages:
-            - text: |-
-                Great! Looks like your codespace is up and running. You can now
-                **run \`docker-compose up\` in your codespace's terminal** to load Anythink's backend and frontend.
-              delay: 3000
         - actionId: finish_step
 trigger:
   type: user_message
