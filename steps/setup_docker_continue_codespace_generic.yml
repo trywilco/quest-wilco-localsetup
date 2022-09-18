@@ -2,6 +2,15 @@ id: setup_docker_continue_codespace_generic
 hints:
 - Make sure your codespace has started and is ready to use.
 startFlow:
+  if:
+    conditions:
+    - conditionId: user_has_feature_flag
+      equals: false
+      params:
+        featureFlag: 'codespaces'
+    then:
+      do:
+      - actionId: finish_step
 trigger:
   type: github_codespace_started
   flowNode:
