@@ -17,7 +17,6 @@ trigger:
             person: head-of-rd
             messages:
             - text: |-
-                Great! Looks like your codespace is up and running. You can now
-                **run \`docker-compose up\` in your codespace's terminal** to load Anythink's backend and frontend.
+                Great! Looks like your codespace is up and running. You can now **run \`docker-compose up\` in your codespace's terminal** to load Anythink's backend and frontend.
               delay: 3000
         - actionId: finish_step
