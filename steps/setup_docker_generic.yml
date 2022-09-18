@@ -58,33 +58,33 @@ trigger:
               then:
                 do:
                 - actionId: bot_message
-                params:
-                  person: head-of-rd
-                  messages:
-                  - text: At Anythink, our engineers work with a development environment that's hosted in the cloud called [Github Codespace](https://docs.github.com/en/codespaces/overview). No need to install anything on your own computer!
-                    delay: 2000
-                  - text: Here's the link to [create your own codespace environment](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId}).
-                    delay: 1000
-                  - text: It takes about a minute to boot. Once it's up and ready you can start working directly in the browser or use VS Code to connect to the codespace in the cloud.
-                    delay: 2000
-                  - text: Go ahead and boot up your codespace, I'll wait.
-                    delay: 1000 # check how setup quest works when waiting for github invitation approval
+                  params:
+                    person: head-of-rd
+                    messages:
+                    - text: At Anythink, our engineers work with a development environment that's hosted in the cloud called [Github Codespace](https://docs.github.com/en/codespaces/overview). No need to install anything on your own computer!
+                      delay: 2000
+                    - text: Here's the link to [create your own codespace environment](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId}).
+                      delay: 1000
+                    - text: It takes about a minute to boot. Once it's up and ready you can start working directly in the browser or use VS Code to connect to the codespace in the cloud.
+                      delay: 2000
+                    - text: Go ahead and boot up your codespace, I'll wait.
+                      delay: 1000
                 - actionId: finish_step
 
               else:
                 do:
                 - actionId: bot_message
-                params:
-                  person: head-of-rd
-                  messages:
-                  - text: Before we dive into the code, we need Docker. It’s going to make
-                      it easier for us to run things locally, which we’ll have to do a lot
-                      during your work here.
-                    delay: 2000
-                  - text: "**So first thing’s first - [install Docker](https://docs.docker.com/get-docker/).**"
-                    delay: 5500
-                  - text: Write me back when you're done. K?
-                    delay: 3000
+                  params:
+                    person: head-of-rd
+                    messages:
+                    - text: Before we dive into the code, we need Docker. It’s going to make
+                        it easier for us to run things locally, which we’ll have to do a lot
+                        during your work here.
+                      delay: 2000
+                    - text: "**So first thing’s first - [install Docker](https://docs.docker.com/get-docker/).**"
+                      delay: 5500
+                    - text: Write me back when you're done. K?
+                      delay: 3000
                 - actionId: finish_step
       else:
         do:
