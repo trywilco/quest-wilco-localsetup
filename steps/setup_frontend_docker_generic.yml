@@ -3,20 +3,41 @@ hints:
 - run `docker-compose up` from the root directory
 - make sure the network requests in the client are complete ok using the network tab.
 startFlow:
-  do:
-  - actionId: bot_message
-    params:
-      person: head-of-rd
-      messages:
-      - text: Now, it’s time to **check the frontend** and make sure it’s **connected
-          to the backend**.
-        delay: 2500
-      - text: If everything is working properly, you’ll be able to **create a new
-          user** on http://localhost:3001/register
-        delay: 3800
-      - text: Create one (choose a cool nickname and everything) and you’ll be able
-          to move to the next task.
-        delay: 2000
+  if:
+    conditions:
+    - conditionId: user_has_feature_flag
+      params:
+        featureFlag: 'codespaces'
+    then:
+      do:
+      - actionId: bot_message
+        params:
+          person: head-of-rd
+          messages:
+          - text: Now, it’s time to **check the frontend** and make sure it’s **connected
+              to the backend**.
+            delay: 2500
+          - text: If everything is working properly, you’ll be able to **create a new
+              user** on https://${user.codespace.name}-3001.githubpreview.dev/register
+            delay: 3800
+          - text: Create one (choose a cool nickname and everything) and you’ll be able
+              to move to the next task.
+            delay: 2000
+    else:
+      do:
+      - actionId: bot_message
+        params:
+          person: head-of-rd
+          messages:
+          - text: Now, it’s time to **check the frontend** and make sure it’s **connected
+              to the backend**.
+            delay: 2500
+          - text: If everything is working properly, you’ll be able to **create a new
+              user** on http://localhost:3001/register
+            delay: 3800
+          - text: Create one (choose a cool nickname and everything) and you’ll be able
+              to move to the next task.
+            delay: 2000
 trigger:
   type: local_page_load
   flowNode:

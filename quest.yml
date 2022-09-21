@@ -17,6 +17,7 @@ solutionBranch: quest_solution/docker_localsetup
 steps:
 - setup_docker_generic
 - setup_docker_continue_generic
+- setup_docker_continue_codespace_generic
 - setup_backend_docker_generic
 - setup_frontend_docker_generic
 - setup_readme_docker_generic
