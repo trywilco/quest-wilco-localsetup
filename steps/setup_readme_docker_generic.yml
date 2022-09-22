@@ -11,7 +11,7 @@ startFlow:
       - text: "It looks like your environment is ready! \U0001F600"
         delay: 1000
       - text: To make this process easier for future employees, **lets update the
-          readme file** and add instructions for setting up a local environment like
+          readme file** and add instructions for setting an environment like
           you just did, and **submit a PR.**
         delay: 2700
 trigger:
