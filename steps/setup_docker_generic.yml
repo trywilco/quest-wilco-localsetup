@@ -65,7 +65,9 @@ trigger:
                   delay: 2000
                 - text: It takes about a minute to boot. Once it's up and ready you can start working directly in the browser or use VS Code to connect to the codespace in the cloud.
                   delay: 3000
-                - text: Go ahead and [create your own codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId}), I'll wait.
+                - text: "Go ahead and **[create your own codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId})** , I'll wait."
+                  delay: 1000
+                - text: (No need to change anything in the default options, just click on the `Create codespace` button and wait for it to boot)
                   delay: 1000
             - actionId: finish_step
           else:
