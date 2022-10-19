@@ -1,4 +1,6 @@
 id: setup_readme_docker_generic
+learningObjectives:
+- Improving documentation
 hints:
 - Take a look at our repository's readme, it's missing some instructions for local
   setup
