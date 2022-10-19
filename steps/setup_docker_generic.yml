@@ -1,4 +1,6 @@
 id: setup_docker_generic
+learningObjectives:
+- Working with Docker 
 hints:
 - Read through the Docker installation guide thoroughly and make sure you didn't miss
   any steps.
