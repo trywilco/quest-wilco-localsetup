@@ -1,4 +1,6 @@
 id: setup_backend_docker_generic
+learningObjectives:
+- Setting Up Backend to run locally and connecting to DB
 hints:
 - Pssst - you can run `docker-compose up` from the root directory
 - run `docker exec -it <container-name> sh` to access a container from the terminal.
