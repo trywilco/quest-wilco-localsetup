@@ -15,17 +15,17 @@ startFlow:
     params:
       person: head-of-rd
       messages:
-      - text: "![](https://media.giphy.com/media/l2QE93CiS1hR6WbK0/giphy.gif)"
-        delay: 0
-      - text: Hey again!
-        delay: 1500
+      - text: "![](https://media.giphy.com/media/8fen5LSZcHQ5O/giphy.gif)"
+        delay: 500
+      - text: Great! Now -
+        delay: 1300
       - text: I know that things might feel a bit overwhelming when you start a new
           job.
         delay: 2500
       - text: "So, to help familiarize you with your new work environment, I was thinking
           that maybe you first should set it up. \U0001F60A"
         delay: 3000
-      - text: Just **let me know once you’re ready** to start your first task!
+      - text: Ready?
         delay: 5000
 trigger:
   type: user_message
