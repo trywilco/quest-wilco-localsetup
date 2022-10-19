@@ -28,11 +28,6 @@ skills:
 - frontend
 - database
 - documentation
-learningObjectives:
-- Working with Docker 
-- Setting Up Backend to run locally and connecting to DB
-- Setting up Frontend and connecting to Backend 
-- Improving documentation
 messages:
   questStarted:
     person: head-of-rd
