@@ -19,7 +19,7 @@ startFlow:
           - text: Once docker-compose finishes loading up, the backend should be running and able
               to connect to the database.
             delay: 2000
-          - text: Let's test this by **pointing your browser** to https://${user.codespace.name}-3000.githubpreview.dev/api/ping
+          - text: "**After the server is up**, make sure you test it by **pointing your browser** to https://${user.codespace.name}-3000.githubpreview.dev/api/ping"
             delay: 1000
     else:
       do:
