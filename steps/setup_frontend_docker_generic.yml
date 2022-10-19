@@ -1,4 +1,6 @@
 id: setup_frontend_docker_generic
+learningObjectives:
+- Setting up Frontend and connecting to Backend 
 hints:
 - run `docker-compose up` from the root directory
 - make sure the network requests in the client are complete ok using the network tab.
