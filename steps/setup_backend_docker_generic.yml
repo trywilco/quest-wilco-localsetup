@@ -33,7 +33,7 @@ startFlow:
            delay: 2000
          - text: If it's something beyond my paygrade, like a serious bug in the system, you can also **contact support@anythink.family**
           delay: 2000
-        - text: Oh, and if you have no idea what to do next, you can always tell me that you're **:input[stuck]{text='I feel stuck'}**, and I'll give you a nudge in the right direction.
+         - text: Oh, and if you have no idea what to do next, you can always tell me that you're **:input[stuck]{text='I feel stuck'}**, and I'll give you a nudge in the right direction.
           delay: 2000
     else:
       do:
