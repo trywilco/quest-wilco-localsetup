@@ -3,7 +3,7 @@ learningObjectives:
 - Setting Up Backend to run locally and connecting to DB
 hints:
 - Pssst - you can run `docker-compose up` from the root directory
-- run `docker exec -it <container-name> sh` to access a container from the terminal.
+- Umm, you should probably run `docker exec -it <container-name> sh` to access a container from the terminal.
 startFlow:
   if:
     conditions:
@@ -33,7 +33,7 @@ startFlow:
             delay: 2700
           - text: https://media.giphy.com/media/Piv9GZi2UBouyyjUxW/giphy.gif
             delay: 2700
-          - text: Also, while you do have **[Discord](https://discord.gg/jcHcRB4Dzk)** to help, :instruction[if things get too complicated, **send me a message with the problem**], and I'll try to help.
+          - text: Also, while you do have **[Discord](https://discord.gg/jcHcRB4Dzk)** to help, if things get too complicated, feel free to input[ask me anything]{text='I need help with:'}, and I'll try to help.
             delay: 4000
           - text: Oh, and if it's something beyond my paygrade, like a serious bug in the system, you can also :instruction[contact support@anythink.family].
             delay: 2000
@@ -60,7 +60,7 @@ startFlow:
             delay: 2000
           - text: https://media.giphy.com/media/Piv9GZi2UBouyyjUxW/giphy.gif
             delay: 2700
-          - text: Also, while you do have **[Discord](https://discord.gg/jcHcRB4Dzk)** to help, :instruction[if things get too complicated, **send me a message with the problem**], and I'll try to help.
+          - text: Also, while you do have **[Discord](https://discord.gg/jcHcRB4Dzk)** to help, if things get too complicated, feel free to input[ask me anything]{text='I need help with:'}, and I'll try to help.
             delay: 4000
           - text: Oh, and if it's something beyond my paygrade, like a serious bug in the system, you can also :instruction[**contact support@anythink.family**].
             delay: 2000
