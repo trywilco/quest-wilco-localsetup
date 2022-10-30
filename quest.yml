@@ -11,6 +11,7 @@ summary: |-
 
   Also, this quest showed us how important it is to have documentation, even (and maybe especially) on day one. Perhaps you can use this opportunity to look at a readme of your team’s project or an open-source one and see if there’s something you can improve.
 slogan: Does it work on your machine?
+shouldResetRepo: false
 duration: 1
 questDependency: onboarding
 solutionBranch: quest_solution/docker_localsetup
