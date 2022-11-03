@@ -20,7 +20,7 @@ startFlow:
               to the backend**.
             delay: 2500
           - text: If everything is working properly, you’ll be able to **create a new
-              user** on https://${user.codespace.name}-3001.githubpreview.dev/register
+              user** on https://${user.codespace.name}-3001.preview.app.github.dev/register
             delay: 3800
           - text: Create one (choose a cool nickname and everything) and you’ll be able
               to move to the next task.
