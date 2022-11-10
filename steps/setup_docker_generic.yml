@@ -56,11 +56,11 @@ trigger:
                 messages:
                 - text: At Anythink, our engineers work with a development environment that's hosted in the cloud called [Github Codespace](https://docs.github.com/en/codespaces/overview). No need to install anything on your own computer!
                   delay: 2000
-                - text: It takes about a minute to boot. Once it's up and ready you can start working directly in the browser or use VS Code to connect to the codespace in the cloud.
+                - text: Once it's up and ready you can start working directly in the browser or use VS Code to connect to the codespace in the cloud.
                   delay: 3000
-                - text: :instruction[[Go ahead and create your own codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId})** , I'll wait.]{block=true}
+                - text: :instruction[[Go ahead and create your own codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId}).** You don't need to change anything in the default options, just **click `Create Codespace`** and wait until it boots up.]{block=true}
                   delay: 1000
-                - text: (No need to change anything in the default options, just click on the `Create codespace` button and wait for it to boot)
+                - text: It takes about a minute to boot. I'll wait with you. 
                   delay: 1000
             - actionId: finish_step
           else:
@@ -84,7 +84,7 @@ trigger:
           params:
             person: head-of-rd
             messages:
-            - text: Umm, If you need any help, just let me know that you’re stuck.
+            - text: :instruction[If you need any help, just say **I'm stuck** to let me know].
                 If that’s not the case - take your time and tell me once you're ready
                 :)
               delay: 2000
