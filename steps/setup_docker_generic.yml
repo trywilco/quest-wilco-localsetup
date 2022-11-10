@@ -62,6 +62,8 @@ trigger:
                   delay: 1000
                 - text: It takes about a minute to boot. I'll wait with you. 
                   delay: 1000
+                - text: That's ok, you don't need to thank me. But you're welcome. 
+                  delay: 1000
             - actionId: finish_step
           else:
             do:
@@ -75,7 +77,7 @@ trigger:
                   delay: 2000
                 - text: "**So first thing’s first - [install Docker](https://docs.docker.com/get-docker/).**"
                   delay: 5500
-                - text: Write me back when you're done. K?
+                - text: Write me back when you're done. 
                   delay: 3000
             - actionId: finish_step
       else:
