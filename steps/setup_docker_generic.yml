@@ -16,13 +16,13 @@ startFlow:
       person: head-of-rd
       messages:
       - text: "![](https://media.giphy.com/media/8fen5LSZcHQ5O/giphy.gif)"
-        delay: 500
+        delay: 800
       - text: I know that things might feel a bit overwhelming when you start a new
           job.
-        delay: 2500
+        delay: 3000
       - text: "So, to help familiarize you with your new work environment, I was thinking
           that maybe you first should set it up. \U0001F60A"
-        delay: 3000
+        delay: 3200
       - text: :input[Ready?]{text='Ready!'}
         delay: 5000
 trigger:
@@ -55,15 +55,15 @@ trigger:
                 - text: At Anythink, our engineers work with a development environment that's hosted in the cloud called [Github Codespace](https://docs.github.com/en/codespaces/overview). No need to install anything on your own computer!
                   delay: 2000
                 - text: Once it's up and ready you can start working directly in the browser or use VS Code to connect to the codespace in the cloud.
-                  delay: 4000
+                  delay: 3000
                 - text: :codeInstruction[[Go ahead and **create your own codespace**.](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId})]{block=true}
-                  delay: 1000
+                  delay: 1300
                 - text: You don't need to change anything in the default options, :codeInstruction[just **click `Create Codespace` and wait until it boots up**.]{block=true}
-                  delay: 1000
+                  delay: 2000
                 - text: It takes about a minute to boot. I'll wait with you. 
-                  delay: 15000
+                  delay: 2000
                 - text: That's ok, you don't need to thank me. But you're welcome. 
-                  delay: 1000
+                  delay: 15000
             - actionId: finish_step
           else:
             do:
