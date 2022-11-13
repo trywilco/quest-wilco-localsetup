@@ -16,8 +16,8 @@ startFlow:
         params:
           person: head-of-rd
           messages:
-          - text: :instruction[Once the `docker-compose up` process has finished running, you can go ahead **check the frontend** and make sure it’s **connected
-              to the backend**.]{block=true}
+          - text: Once the `docker-compose up` process has finished running, you can go ahead **check the frontend** and make sure it’s **connected
+              to the backend**.
             delay: 2500
           - text: :instruction[To do this, go to https://${user.codespace.name}-3001.preview.app.github.dev/register and **create a new
               user**]{block=true}
@@ -30,8 +30,8 @@ startFlow:
         params:
           person: head-of-rd
           messages:
-          - text: :instruction[Once the `docker-compose up` process has finished running, you can go ahead **check the frontend** and make sure it’s **connected
-              to the backend**.]{block=true}
+          - text: Once the `docker-compose up` process has finished running, you can go ahead **check the frontend** and make sure it’s **connected
+              to the backend**.]
             delay: 2500
           - text: :instruction[Go to http://localhost:3001/register and **create a new user.**]{block=true}
             delay: 3800
