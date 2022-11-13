@@ -42,7 +42,7 @@ messages:
   questFinished:
     person: head-of-rd
     messages:
-    - text: Wonderful job! You've just crushed the last dib of this project. 
+    - text: Wonderful job! You've just crushed the last step of this project. 
       delay: 1000
     - text: We still have a lot of work ahead of us, so **[click here](${platform.home})**
         when you're ready for your next project :)
