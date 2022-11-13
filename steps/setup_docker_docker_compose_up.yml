@@ -11,7 +11,7 @@ trigger:
   flowNode:
     if:
       conditions:
-      - conditionId: text_contains_strings
+      - conditionId: is_user_message_text_ready_to_continue
         params:
           text: "${userMessageText}"
           strings: 
@@ -19,6 +19,8 @@ trigger:
           - ok
           - ready
           - finished
+          - let's go
+          - success
       then:
         do:
         - actionId: bot_message
