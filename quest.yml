@@ -3,13 +3,9 @@ level: beginner
 title: Setup
 description: Your tools are lying before you; it’s time to see if they’re sharp and
   ready for work. We’ll set up a local environment, verify that its backend and frontend
-  are connected, create a test user, and make sure that the generations of engineers
-  who follow in our footsteps understand how valuable our contribution to their success
-  was—through proper documentation of our efforts.
+  are connected and create a test user.
 summary: |-
   That's all for now, The system is working locally, and you have everything you need to continue. We hope the Docker setup helped make it easier to set everything up without installing and configuring many parts.
-
-  Also, this quest showed us how important it is to have documentation, even (and maybe especially) on day one. Perhaps you can use this opportunity to look at a readme of your team’s project or an open-source one and see if there’s something you can improve.
 slogan: Does it work on your machine?
 shouldResetRepo: false
 duration: 1
@@ -19,16 +15,14 @@ steps:
 - setup_docker_generic
 - setup_docker_continue_generic
 - setup_docker_continue_codespace_generic
-- setup_backend_docker_generic
+- setup_docker_docker_compose_up
 - setup_frontend_docker_generic
-- setup_readme_docker_generic
 skills:
 - setup
 - communication
 - backend
 - frontend
 - database
-- documentation
 messages:
   questStarted:
     person: head-of-rd
@@ -49,9 +43,7 @@ messages:
   questFinished:
     person: head-of-rd
     messages:
-    - text: Wonderful job! You've just crushed the last dib of this project. Make
-        sure you grab yourself a cup of coffee and stretch your legs. You've earned
-        it!
+    - text: Wonderful job! You've just crushed the last step of this project. 
       delay: 1000
     - text: We still have a lot of work ahead of us, so **[click here](${platform.home})**
         when you're ready for your next project :)

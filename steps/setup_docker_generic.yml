@@ -15,6 +15,8 @@ startFlow:
     params:
       person: head-of-rd
       messages:
+      - text: "![](https://media.giphy.com/media/8fen5LSZcHQ5O/giphy.gif)"
+        delay: 500
       - text: I know that things might feel a bit overwhelming when you start a new
           job.
         delay: 2500
@@ -37,19 +39,8 @@ trigger:
           params:
             person: head-of-rd
             messages:
-            - text: ![](https://media.giphy.com/media/8fen5LSZcHQ5O/giphy.gif)
-              delay: 1200
-            - text: Oh right, here at ${companyName}, we like to call our
-                tasks - 'dibs'.
-              delay: 3500 
-            - text: I wish I could say there's a cool explanation for it, but honestly,
-                it's just one of Mr. Ben's weird fixations 
-              delay: 3500
-            - text: You'll get it once you meet him; he’s a bit, well, he sure is…
-                something.
-              delay: 4000
-            - text: _Anyway, the DIB!_
-              delay: 4000
+            - text: Awesome! 
+              delay: 2000
         if:
           conditions:
           - conditionId: user_has_feature_flag
@@ -63,11 +54,15 @@ trigger:
                 messages:
                 - text: At Anythink, our engineers work with a development environment that's hosted in the cloud called [Github Codespace](https://docs.github.com/en/codespaces/overview). No need to install anything on your own computer!
                   delay: 2000
-                - text: It takes about a minute to boot. Once it's up and ready you can start working directly in the browser or use VS Code to connect to the codespace in the cloud.
+                - text: Once it's up and ready you can start working directly in the browser or use VS Code to connect to the codespace in the cloud.
                   delay: 3000
-                - text: "Go ahead and **[create your own codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId})** , I'll wait."
+                - text: :instruction[[Go ahead and **create your own codespace**.](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId})]{block=true}
                   delay: 1000
-                - text: (No need to change anything in the default options, just click on the `Create codespace` button and wait for it to boot)
+                - text: :instruction[You don't need to change anything in the default options, just **click `Create Codespace` and wait until it boots up**.]{block=true}
+                  delay: 1000
+                - text: It takes about a minute to boot. I'll wait with you. 
+                  delay: 1000
+                - text: That's ok, you don't need to thank me. But you're welcome. 
                   delay: 1000
             - actionId: finish_step
           else:
@@ -82,7 +77,7 @@ trigger:
                   delay: 2000
                 - text: "**So first thing’s first - [install Docker](https://docs.docker.com/get-docker/).**"
                   delay: 5500
-                - text: Write me back when you're done. K?
+                - text: Write me back when you're done. 
                   delay: 3000
             - actionId: finish_step
       else:
@@ -91,7 +86,7 @@ trigger:
           params:
             person: head-of-rd
             messages:
-            - text: Umm, If you need any help, just let me know that you’re stuck.
+            - text: :instruction[If you need any help, just say **I'm stuck** to let me know].
                 If that’s not the case - take your time and tell me once you're ready
                 :)
               delay: 2000

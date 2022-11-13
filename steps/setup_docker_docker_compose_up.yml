@@ -1,0 +1,35 @@
+id: setup_docker_docker_compose_up
+hints:
+- Read through the Docker installation guide thoroughly and make sure you didn't miss
+  any steps.
+- Make sure you ran the \`docker-compose up\` command from the **project root directory**
+  and that it finished running. This may take a few moments.
+trigger:
+  type: user_message
+  params: 
+    person: head-of-rd
+  flowNode:
+    if:
+      conditions:
+      - conditionId: text_match_regex
+        params:
+          text: "${userMessageText}"
+          regex: done
+          flags: i
+      then:
+        do:
+        - actionId: bot_message
+          params:
+            person: head-of-rd
+            messages:
+            - text: Perfect. 
+              delay: 1300
+        - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: head-of-rd
+            messages:
+            - text: It shouldn't take much longer, but if you encounter a problem, you can try running the \`docker-compose up\` command again. 
+              delay: 2500
