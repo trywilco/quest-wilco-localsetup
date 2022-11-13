@@ -22,7 +22,7 @@ startFlow:
           - text: :instruction[Go to https://${user.codespace.name}-3001.preview.app.github.dev/register and **create a new
               user**]{block=true} 
             delay: 3800
-            - text: :instruction[If you are unable to create a new user, make sure that the `docker-compose up` process has finished running and try again.]{block=true}
+            - text: :instruction[If you are unable to create a new user, make sure that the `docker-compose up` process has finished running and try again.]
             delay: 3800
     else:
       do:
