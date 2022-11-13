@@ -30,8 +30,7 @@ trigger:
           params:
             person: head-of-rd
             messages:
-            - text: |-
-                Great! You can verify docker is ready by running the following commands in your terminal: \`docker -v\` and \`docker-compose -v\`.
+            - text: Great! You can verify docker is ready by running the following commands in your terminal: \`docker -v\` and \`docker-compose -v\`.
                 Then, **run \`docker-compose up\` from the project root directory** to load Anythink's backend and frontend.
               delay: 3000
             - text: Ok. That’s a great first step - now we can make sure that the
