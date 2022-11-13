@@ -11,11 +11,16 @@ trigger:
   flowNode:
     if:
       conditions:
-      - conditionId: text_match_regex
+      - conditionId: is_user_message_text_ready_to_continue
         params:
           text: "${userMessageText}"
-          regex: done
-          flags: i
+          strings: 
+          - done
+          - ok
+          - ready
+          - finished
+          - let's go
+          - success
       then:
         do:
         - actionId: bot_message
