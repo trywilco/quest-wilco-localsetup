@@ -25,9 +25,36 @@ trigger:
           params:
             person: head-of-rd
             messages:
-            - text: |-
-                Great! Looks like your codespace is up and running. 
-            - text: |-
-               :instruction:[You can now **run \`docker-compose up\` in your codespace's terminal** to load Anythink's backend and frontend.]
+            - text: Great! Looks like your codespace is up and running. 
+              delay: 1000
+            - text: :instruction:[You can now **run \`docker-compose up\` in your codespace's terminal** to load Anythink's backend and frontend. This should take a few minutes. Let me know when it's done.]
               delay: 3000
+trigger:
+  type: user_message
+  params: 
+    person: head-of-rd
+  flowNode:
+    if:
+      conditions:
+      - conditionId: text_match_regex
+        params:
+          text: "${userMessageText}"
+          regex: done
+          flags: i
+      then:
+        do:
+        - actionId: bot_message
+          params:
+            person: head-of-rd
+            messages:
+            - text: Perfect. 
+              delay: 1300
         - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: keen
+            messages:
+            - text: It shouldn't take much longer, but if you encounter a problem, you can try running the \`docker-compose up\` command again. 
+              delay: 2500
