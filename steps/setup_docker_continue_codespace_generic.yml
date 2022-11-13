@@ -27,6 +27,6 @@ trigger:
             messages:
             - text: Great! Looks like your codespace is up and running. 
               delay: 1000
-            - text: :instruction:[You can now **run \`docker-compose up\` in your codespace's terminal** to load Anythink's backend and frontend. This should take a few minutes. Let me know when it's done.]
+            - text: :instruction[You can now **run \`docker-compose up\` in your codespace's terminal** to load Anythink's backend and frontend. This should take a few minutes. **Let me know when it's done.**]
               delay: 3000
         - actionId: finish_step
