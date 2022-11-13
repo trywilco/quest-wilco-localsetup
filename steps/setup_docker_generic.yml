@@ -21,7 +21,7 @@ startFlow:
       - text: "So, to help familiarize you with your new work environment, I was thinking
           that maybe you first should set it up. \U0001F60A"
         delay: 3000
-      - text: Ready?
+      - text: :input[Ready?]{text='Ready!'}
         delay: 5000
 trigger:
   type: user_message
