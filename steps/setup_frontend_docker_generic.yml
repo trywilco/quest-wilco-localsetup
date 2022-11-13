@@ -19,10 +19,7 @@ startFlow:
           - text: Once the `docker-compose up` process has finished running, you can go ahead **check the frontend** and make sure it’s **connected
               to the backend**.
             delay: 2500
-          - text: :instruction[To do this, go to https://${user.codespace.name}-3001.preview.app.github.dev/register and **create a new
-              user**]{block=true}
-            delay: 3800
-          - text: :instruction[If you are unable to create a new user, make sure that the `docker-compose up` process has finished running and try again.]{block=true}
+          - text: :instruction[To do this, go to https://${user.codespace.name}-3001.preview.app.github.dev
             delay: 3800
     else:
       do:
@@ -40,24 +37,13 @@ startFlow:
 trigger:
   type: local_page_load
   flowNode:
-    if:
-      conditions:
-      - conditionId: text_match_regex
-        params:
-          text: "${path}"
-          regex: "^/@"
-      then:
-        do:
+       do:
         - actionId: bot_message
           params:
             person: head-of-rd
             messages:
-            - text: Ooohh, I didn’t expect you to do this so quickly! Even your username,
-                ${path.slice(2)}, brings back memories. Strangely enough, they’re
-                your memories, which I don’t know why I have.
+            - text: Great, looks like everything is working. 
               delay: 2000
-            - text: Never mind that, though. You’re done with this step.
-              delay: 4300
             - text: Just make sure that you **run all scripts in the next quests on
                 one of the containers** created by \`docker-compose up\`.  Also, **you
                 can use \`docker exec\` to run commands** on a running container.
