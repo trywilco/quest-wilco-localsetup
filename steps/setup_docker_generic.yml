@@ -63,7 +63,7 @@ trigger:
                 - text: It takes about a minute to boot. I'll wait with you. 
                   delay: 2000
                 - text: That's ok, you don't need to thank me. But you're welcome. 
-                  delay: 15000
+                  delay: 2000
             - actionId: finish_step
           else:
             do:
