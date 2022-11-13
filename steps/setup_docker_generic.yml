@@ -15,10 +15,6 @@ startFlow:
     params:
       person: head-of-rd
       messages:
-      - text: "![](https://media.giphy.com/media/8fen5LSZcHQ5O/giphy.gif)"
-        delay: 500
-      - text: Great! Now -
-        delay: 1300
       - text: I know that things might feel a bit overwhelming when you start a new
           job.
         delay: 2500
@@ -41,11 +37,13 @@ trigger:
           params:
             person: head-of-rd
             messages:
-            - text: Awesome! Oh right, here at ${companyName}, we like to call our
+            - text: ![](https://media.giphy.com/media/8fen5LSZcHQ5O/giphy.gif)
+              delay: 1200
+            - text: Oh right, here at ${companyName}, we like to call our
                 tasks - 'dibs'.
-              delay: 700
-            - text: "I wish I could say there's a cool explanation for it, but honestly,
-                it's just one of Mr. Ben's weird fixations \U0001F937 "
+              delay: 3500 
+            - text: I wish I could say there's a cool explanation for it, but honestly,
+                it's just one of Mr. Ben's weird fixations 
               delay: 3500
             - text: You'll get it once you meet him; he’s a bit, well, he sure is…
                 something.
