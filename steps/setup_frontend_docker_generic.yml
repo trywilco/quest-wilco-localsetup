@@ -28,9 +28,9 @@ startFlow:
           person: head-of-rd
           messages:
           - text: Now you can go ahead **check the frontend** and make sure it’s **connected
-              to the backend**.]
+              to the backend**.
             delay: 2500
-          - text: :instruction[**Go to http://localhost:3001/register and **create a new user.**]{block=true}
+          - text: :instruction[**Go to http://localhost:3001/**]{block=true}
             delay: 3000
           - text: :instruction[If you encounter a problem, make sure that the `docker-compose up` process has finished running and try again.]{block=true}
             delay: 2000
