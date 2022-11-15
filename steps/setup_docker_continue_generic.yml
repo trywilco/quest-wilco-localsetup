@@ -34,8 +34,6 @@ trigger:
               delay: 1000
             - text: :instruction[You can verify docker is ready by running the following commands in your terminal- \`docker -v\` and \`docker-compose -v\`.
                 Then, **run \`docker-compose up\` from the project root directory** to load Anythink's backend and frontend.]{block:true}
-              delay: 3000
-            - text: Ok. That’s a great first step - now we can make sure that the code is working :)
               delay: 2000
         - actionId: finish_step
       else:
