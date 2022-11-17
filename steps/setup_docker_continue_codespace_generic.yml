@@ -27,9 +27,9 @@ trigger:
             messages:
             - text: Great! Looks like your codespace is up and running. 
               delay: 1000
-            - text: :instruction[You can now **run \`docker-compose up\` in your codespace's terminal** to load Anythink's backend and frontend. This should take a few minutes, so hang tight. **I'll let you know when it's done.**]{block=true}
+            - text: :instruction[You can now **run \`docker-compose up\` in your codespace's terminal** to load Anythink's backend and frontend.]{block=true}
               delay: 3000
-            - text: :instruction[If you need any help, reach out to Joebroom, our Support guy, right here in Snack.]{block=true} 
+            - text: :instruction[This should take a few minutes, so hang tight. I'll let you know when it's done. **If you need any help, reach out to Joebroom, our Support guy, right here in Snack.**]{block=true} 
               delay: 1000
         - actionId: bot_message
           params:
