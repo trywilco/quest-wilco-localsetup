@@ -37,6 +37,22 @@ trigger:
               delay: 3000
             - text: Ok. That’s a great first step - now we can make sure that the code is working :)
               delay: 2000
+           - actionId: bot_message
+          params:
+            person: senior-dev
+            messages:
+            - text: Hi ${user.firstName} 
+              delay: 2000
+            - text: Welcome to our happy little ~dysfunctional~ family!
+              delay: 2500
+            - text: I'm Joebroom, officially transferred from "gray patterns" team to Ness's. Just wanted to introduce myself 😎
+              delay: 2700
+            - text: https://media.giphy.com/media/Piv9GZi2UBouyyjUxW/giphy.gif
+              delay: 2700
+            - text: Also, while you do have **[Discord](https://discord.gg/jcHcRB4Dzk)** to help, if things get too complicated, feel free to **:input[ask me anything]{text='My question is:'}**, and I'll try to help.
+              delay: 4000
+            - text: Oh, and if it's something beyond my paygrade, like a serious bug in the system, you can also **contact support@anythink.family**.
+              delay: 2000
         - actionId: finish_step
       else:
         do:
