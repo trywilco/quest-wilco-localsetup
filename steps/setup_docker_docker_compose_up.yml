@@ -5,36 +5,12 @@ hints:
 - Make sure you ran the \`docker-compose up\` command from the **project root directory**
   and that it finished running. This may take a few moments.
 trigger:
-  type: user_message
-  params: 
-    person: head-of-rd
+  type: ping
   flowNode:
-    if:
-      conditions:
-      - conditionId: is_user_message_text_ready_to_continue
-        params:
-          text: "${userMessageText}"
-          strings: 
-          - done
-          - ok
-          - ready
-          - finished
-          - let's go
-          - success
-      then:
-        do:
-        - actionId: bot_message
-          params:
-            person: head-of-rd
-            messages:
-            - text: Perfect. 
-              delay: 1300
-        - actionId: finish_step
-      else:
-        do:
-        - actionId: bot_message
-          params:
-            person: head-of-rd
-            messages:
-            - text: It shouldn't take much longer, but if you encounter a problem, you can try running the \`docker-compose up\` command again. 
-              delay: 2500
+    do:
+     - actionId: bot_message
+          person: head-of-rd
+          messages:
+          - text: "Easy Peasy! The backend is up and running."
+            delay: 2000
+      - actionId: finish_step
