@@ -8,8 +8,7 @@ trigger:
   type: ping
   flowNode:
     do:
-      - actionId: bot_message
-        params:
+     - actionId: bot_message
           person: head-of-rd
           messages:
           - text: "Easy Peasy! The backend is up and running."
