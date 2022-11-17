@@ -37,7 +37,7 @@ trigger:
               delay: 3000
             - text: Ok. That’s a great first step - now we can make sure that the code is working :)
               delay: 2000
-           - actionId: bot_message
+        - actionId: bot_message
           params:
             person: senior-dev
             messages:
