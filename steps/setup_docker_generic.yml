@@ -25,6 +25,7 @@ startFlow:
         delay: 3000
       - text: I bet you’re eager to get your hands dirty asap. Let’s **set up your local environment** so you can start exploring the system.
         delay: 1000 
+trigger: 
   if:
     conditions:
       - conditionId: user_has_feature_flag
