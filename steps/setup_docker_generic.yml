@@ -30,7 +30,7 @@ startFlow:
       - conditionId: user_has_feature_flag
         params:
           featureFlag: 'codespaces'
-            then:
+          then:
               do:
                 - actionId: bot_message
                   params:
