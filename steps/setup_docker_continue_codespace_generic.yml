@@ -31,11 +31,11 @@ startFlow:
             delay: 2000
 trigger:
   type: github_codespace_started
-  flowNode:
+  flowNode: 
     if:
       conditions:
       - conditionId: user_has_feature_flag
-        params:
+        params: 
           featureFlag: 'codespaces'
       then:
         do:
