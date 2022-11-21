@@ -47,7 +47,7 @@ trigger:
             - text: :instruction[You can verify docker is ready by running the following commands in your terminal- \`docker -v\` and \`docker-compose -v\`.
                 Then, **run \`docker-compose up\` from the project \`main\` directory** to load Anythink's backend and frontend.]{block:true}
               delay: 3000
-            - text: This should take a few minutes, so hang tight. :instruction[**Just let me know when it's done**]. Also, if you need any help, reach out to Joebroom, our Support guy, right here in Snack.
+            - text: This should take a few minutes, so hang tight. Also, if you need any help, reach out to Joebroom, our Support guy, right here in Snack.
               delay: 2000
         - actionId: bot_message
           params:
