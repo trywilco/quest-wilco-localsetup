@@ -15,16 +15,16 @@ startFlow:
     params:
       person: head-of-rd
       messages:
-      - text: "![](https://media.giphy.com/media/8fen5LSZcHQ5O/giphy.gif)"
-        delay: 800
-      - text: I know that things might feel a bit overwhelming when you start a new
-          job.
+      - text: "To make sure you don’t miss any messages from your teammates, please approve Anythink browser notifications. We will never use it for spam or any other questionable purpose (that's what our emails are for)."
+        delay: 6000
+        components:
+      - type: button
+        action: REQUEST_WEB_NOTIFICATION_PERMISSION
+        text: Approve notifications
+      - text: "**That's it!** You're now officially prepared for anything we might throw at you. Well, I hope you are, Carl certainly wasn't. Poor Carl."
         delay: 3000
-      - text: "So, to help familiarize you with your new work environment, I was thinking
-          that maybe you first should set it up. \U0001F60A"
-        delay: 3200
-      - text: :input[Ready?]{text='Ready!'}
-        delay: 5000
+      - text: Now, I believe it's time for your first assignment!
+        delay: 3000
 trigger:
   type: user_message
   params:
