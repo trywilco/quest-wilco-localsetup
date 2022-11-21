@@ -19,17 +19,17 @@ startFlow:
     else: 
       do: 
       - actionId: bot_message
-              params:
-                person: head-of-rd
-                messages:
-                - text: Before we dive into the code, we need Docker. It’s going to make
-                    it easier for us to run things locally, which we’ll have to do a lot
-                    during your work here.
-                  delay: 2000
-                - text: "**So first thing’s first - :codeInstruction[install Docker](https://docs.docker.com/get-docker/).**"
-                  delay: 5500
-                - text: Write me back when you're done. 
-                  delay: 3000
+        params:
+          person: head-of-rd
+          messages:
+          - text: Before we dive into the code, we need Docker. It’s going to make
+              it easier for us to run things locally, which we’ll have to do a lot
+              during your work here.
+            delay: 2000
+          - text: "**So first thing’s first - :codeInstruction[install Docker](https://docs.docker.com/get-docker/).**"
+            delay: 5500
+          - text: Write me back when you're done. 
+            delay: 3000
 trigger:
   type: user_message
   params:
