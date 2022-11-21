@@ -23,70 +23,46 @@ startFlow:
         text: Approve notifications
       - text: "**That's it!** You're now officially prepared for anything we might throw at you. Well, I hope you are, Carl certainly wasn't. Poor Carl."
         delay: 3000
-      - text: Now, I believe it's time for your first assignment!
-        delay: 3000
-trigger:
-  type: user_message
-  params:
-    person: head-of-rd
-  flowNode:
-    if:
-      conditions:
-      - conditionId: is_user_message_text_ready_to_continue
-      then:
-        do:
-        - actionId: bot_message
-          params:
-            person: head-of-rd
-            messages:
-            - text: Awesome! 
-              delay: 2000
-        if:
-          conditions:
-          - conditionId: user_has_feature_flag
-            params:
-              featureFlag: 'codespaces'
-          then:
-            do:
-            - actionId: bot_message
-              params:
-                person: head-of-rd
-                messages:
-                - text: At Anythink, our engineers work with a development environment that's hosted in the cloud called [Github Codespace](https://docs.github.com/en/codespaces/overview). No need to install anything on your own computer!
-                  delay: 2000
-                - text: Once it's up and ready you can start working directly in the browser or use VS Code to connect to the codespace in the cloud.
-                  delay: 3000
-                - text: :codeInstruction[[Go ahead and **create your own codespace**.](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId})]{block=true}
-                  delay: 1300
-                - text: You don't need to change anything in the default options, :codeInstruction[just **click `Create Codespace` and wait until it boots up**.]{block=true}
-                  delay: 2000
-                - text: It takes about a minute to boot. I'll wait with you. 
-                  delay: 2000
-                - text: That's ok, you don't need to thank me. But you're welcome. 
-                  delay: 2000
-            - actionId: finish_step
-          else:
-            do:
-            - actionId: bot_message
-              params:
-                person: head-of-rd
-                messages:
-                - text: Before we dive into the code, we need Docker. It’s going to make
-                    it easier for us to run things locally, which we’ll have to do a lot
-                    during your work here.
-                  delay: 2000
-                - text: "**So first thing’s first - :codeInstruction[install Docker](https://docs.docker.com/get-docker/).**"
-                  delay: 5500
-                - text: Write me back when you're done. 
-                  delay: 3000
-            - actionId: finish_step
-      else:
-        do:
-        - actionId: bot_message
-          params:
-            person: head-of-rd
-            messages:
-            - text: :instruction[If you need any help, just say **I'm stuck** to let me know].
-                If that’s not the case - take your time and tell me once you're ready
-                :)
-              delay: 2000
+      - text: I bet you’re eager to get your hands dirty asap. Let’s **set up your local environment** so you can start exploring the system.
+        delay: 1000 
+  if:
+    conditions:
+      - conditionId: user_has_feature_flag
+        params:
+          featureFlag: 'codespaces'
+            then:
+              do:
+                - actionId: bot_message
+                  params:
+                    person: head-of-rd
+                    messages:
+                    - text: At Anythink, our engineers work with a development environment that's hosted in the cloud called [Github Codespace](https://docs.github.com/en/codespaces/overview). No need to install anything on your own computer!
+                      delay: 2000
+                    - text: Once it's up and ready you can start working directly in the browser or use VS Code to connect to the codespace in the cloud.
+                      delay: 3000
+                    - text: :codeInstruction[[Go ahead and **create your own codespace**.](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId})]{block=true}
+                      delay: 1300
+                    - text: You don't need to change anything in the default options, :codeInstruction[just **click `Create Codespace` and wait until it boots up**.]{block=true}
+                      delay: 2000
+                    - text: It takes about a minute to boot. I'll wait with you. 
+                      delay: 2000
+                    - text: That's ok, you don't need to thank me. But you're welcome. 
+                      delay: 2000
+                    - actionId: finish_step
+  else:
+    do:
+    - actionId: bot_message
+      params:
+        person: head-of-rd
+        messages:
+        - text: Before we dive into the code, we need Docker. It’s going to make
+                it easier for us to run things locally, which we’ll have to do a lot
+                during your work here.
+          delay: 2000
+        - text: "**So first thing’s first - :codeInstruction[install Docker](https://docs.docker.com/get-docker/).**"
+          delay: 5500
+        - text: Write me back when you're done. 
+          delay: 3000
+        - actionId: finish_step
+      
+              
