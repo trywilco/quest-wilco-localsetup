@@ -6,8 +6,8 @@ startFlow:
     params:
       person: head-of-rd
       messages:
-        - text: "Sounds good! **What about the specific skills you'd like to focus on,** in your journey with us? (try to think about your top3 preferred ones)"
-          delay: 2000
+        - text: "Sounds good! **What specific skills do you want to focus on?** (choose up to 3)"
+          delay: 2300
         - components:
             - type: form
               form:
