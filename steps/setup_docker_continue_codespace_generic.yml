@@ -45,7 +45,9 @@ trigger:
               delay: 1000
             - text: :instruction[You can now **run \`docker-compose up\` in your codespace's terminal** to load Anythink's backend and frontend.]{block=true}
               delay: 3000
-            - text: This should take a few minutes, so hang tight. If you need any help, reach out to Joebroom, our Support guy, right here in Snack.
+            - text: This should take a few minutes, so hang tight. **I'll let you know when it's done**. 
+              delay: 1000
+            - text: If you need any help, just reach out to Joebroom, our Support guy, right here in Snack.
               delay: 1000
         - actionId: bot_message
           params:
