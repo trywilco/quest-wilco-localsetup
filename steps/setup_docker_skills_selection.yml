@@ -6,7 +6,9 @@ startFlow:
     params:
       person: head-of-rd
       messages:
-        - text: "Yalla, now tell me which skills you'd like us to focus on"
+        - text: "Ok! It's time for your first official task, and I want to make sure it's a good one!"
+          delay: 2000
+        - text: "For that, I need to know **what areas and skills you'd like to focus on,** in your journey with us."
           delay: 2000
         - components:
             - type: form
@@ -40,7 +42,7 @@ trigger:
       params:
         person: head-of-rd
         messages:
-          - text: "Great, you chose very well! Navi will reach out to you shortly"
-            delay: 200
+          - text: "You chose well, young grasshopper 🦗✨ "
+            delay: 2000
     - actionId: finish_step
 
