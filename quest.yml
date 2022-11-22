@@ -17,6 +17,8 @@ steps:
 - setup_docker_continue_codespace_generic
 - setup_docker_docker_compose_up
 - setup_frontend_docker_generic
+- setup_docker_areas_selection
+- setup_docker_skills_selection
 skills:
 - setup
 - communication

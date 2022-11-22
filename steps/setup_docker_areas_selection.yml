@@ -1,0 +1,41 @@
+id: setup_docker_areas_selection
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: head-of-rd
+        messages:
+          - text: "![](https://media.giphy.com/media/udfgxip30ltcgDxuZX/giphy.gif)"
+            delay: 2000
+          - text: "Before we continue, as part of Anythink employee retention plan - we want to make sure that YOU get to focus on what YOU want to learn, so I can get MY bonus"
+            delay: 2000
+          - text: "So please tell us what you would like to work on, when joining Anythink? (you can choose multiple options, btw)?"
+            delay: 2000
+          - components:
+              - type: form
+                form:
+                  id: area_selection
+                  type: multi_select_form
+                  randomized: true
+                  select_limit: 3
+                  action_label: 'Submit Selection'
+                  options:
+                    - text: 'frontend'
+                    - text: 'backend'
+                    - text: 'database'
+                    - text: 'devops'
+
+
+trigger:
+  type: chat_form_submitted
+  params:
+    formId: area_selection
+  flowNode:
+    do:
+      - actionId: update_user_props
+        params:
+          field: "onboarding.areas"
+          value: "${{formSubmission}}"
+      - actionId: finish_step
+
