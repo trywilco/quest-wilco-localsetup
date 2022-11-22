@@ -8,9 +8,9 @@ startFlow:
         messages:
           - text: "![](https://media.giphy.com/media/udfgxip30ltcgDxuZX/giphy.gif)"
             delay: 2000
-          - text: "Before we continue, as part of Anythink employee retention plan - we want to make sure that YOU get to focus on what YOU want to learn, so I can get MY bonus"
+          - text: "Well then, It's almost time for your first official task, and I want to make sure it's a good one!"
             delay: 2000
-          - text: "So please tell us what you would like to work on, when joining Anythink? (you can choose multiple options, btw)?"
+          - text: "So please tell me what you would like to work on, when joining Anythink? (you can choose multiple options, obviously)"
             delay: 2000
           - components:
               - type: form
