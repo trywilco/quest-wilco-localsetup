@@ -21,10 +21,14 @@ startFlow:
                   select_limit: 3
                   action_label: 'Submit Selection'
                   options:
-                    - text: 'frontend'
-                    - text: 'backend'
-                    - text: 'database'
-                    - text: 'devops'
+                    - value: 'frontend'
+                      label: 'Frontend'
+                    - value: 'backend'
+                      label: 'Backend'
+                    - value: 'database'
+                      label: 'Database'
+                    - value: 'devops'
+                      label: 'DevOps'
 
 
 trigger:

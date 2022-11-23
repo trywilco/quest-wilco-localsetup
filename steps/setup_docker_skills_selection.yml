@@ -17,14 +17,22 @@ startFlow:
                 select_limit: 3
                 action_label: 'Submit Selection'
                 options:
-                  - text: 'setup'
-                  - text: 'observability'
-                  - text: 'debugging'
-                  - text: 'communication'
-                  - text: 'documentation'
-                  - text: 'monitoring'
-                  - text: 'operations'
-                  - text: 'performace'
+                  - value: 'setup'
+                    label: 'Setup'
+                  - value: 'observability'
+                    label: 'Observability'
+                  - value: 'debugging'
+                    label: 'Debugging'
+                  - value: 'communication'
+                    label: 'Communication'
+                  - value: 'documentation'
+                    label: 'Documentation'
+                  - value: 'monitoring'
+                    label: 'Monitoring'
+                  - value: 'operations'
+                    label: 'Operations'
+                  - value: 'performance'
+                    label: 'Performance'
 
 trigger:
   type: chat_form_submitted
