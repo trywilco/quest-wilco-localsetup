@@ -1,6 +1,6 @@
 id: setup_docker_continue_codespace_generic
 hints:
-- Make sure your codespace has started and is ready to use.
+- Make sure your Codespace has started and is ready to use.
 startFlow:
   if:
     conditions:
