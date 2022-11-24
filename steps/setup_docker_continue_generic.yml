@@ -16,6 +16,18 @@ startFlow:
     then:
       do:
       - actionId: finish_step
+    else: 
+      do: 
+      - actionId: bot_message
+        params:
+          person: head-of-rd
+          messages:
+          - text: I bet you’re eager to get your hands dirty. Let’s set up your local environment so you can start exploring the system.
+            delay: 2000
+          - text: "**So first thing’s first - :codeInstruction[install Docker](https://docs.docker.com/get-docker/).**"
+            delay: 5500
+          - text: Write me back when you're done. 
+            delay: 3000
 trigger:
   type: user_message
   params:
