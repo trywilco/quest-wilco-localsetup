@@ -1,6 +1,6 @@
 id: setup_docker_continue_codespace_generic
 hints:
-- Make sure your codespace has started and is ready to use.
+- Make sure your Codespace has started and is ready to use.
 startFlow:
   if:
     conditions:
@@ -11,13 +11,29 @@ startFlow:
     then:
       do:
       - actionId: finish_step
+    else: 
+      do:
+      - actionId: bot_message
+        params:
+          person: head-of-rd
+          messages:
+          - text: I bet you’re eager to get your hands dirty. Let’s set up your local environment so you can start exploring the system.
+            delay: 
+          - text: At Anythink, our engineers work with a cloud-hosted IDE called [Github Codespaces](https://docs.github.com/en/codespaces/overview). 
+            delay: 2000
+          - text: :codeInstruction[[Go ahead and **create your own Codespace**.](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId})]{block=true}
+            delay: 1300
+          - text: Use the default options, and :codeInstruction[**click `Create Codespace` and wait until it boots up**.]{block=true}
+            delay: 2000
+          - text: Once it's up and ready you can start working directly in the browser or use VS Code to connect to the codespace in the cloud.
+            delay: 3000
 trigger:
   type: github_codespace_started
-  flowNode:
+  flowNode: 
     if:
       conditions:
       - conditionId: user_has_feature_flag
-        params:
+        params: 
           featureFlag: 'codespaces'
       then:
         do:
@@ -25,7 +41,7 @@ trigger:
           params:
             person: head-of-rd
             messages:
-            - text: Great! Looks like your codespace is up and running. 
+            - text: Great! Looks like your Codespace is up and running. 
               delay: 1000
             - text: :instruction[You can now **run \`docker-compose up\` in your codespace's terminal** to load Anythink's backend and frontend.]{block=true}
               delay: 3000
