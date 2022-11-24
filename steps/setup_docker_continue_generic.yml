@@ -22,9 +22,7 @@ startFlow:
         params:
           person: head-of-rd
           messages:
-          - text: Before we dive into the code, we need Docker. It’s going to make
-              it easier for us to run things locally, which we’ll have to do a lot
-              during your work here.
+          - text: I bet you’re eager to get your hands dirty. Let’s set up your local environment so you can start exploring the system.
             delay: 2000
           - text: "**So first thing’s first - :codeInstruction[install Docker](https://docs.docker.com/get-docker/).**"
             delay: 5500
