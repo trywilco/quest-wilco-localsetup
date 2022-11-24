@@ -17,18 +17,16 @@ startFlow:
         params:
           person: head-of-rd
           messages:
-          - text: At Anythink, our engineers work with a development environment that's hosted in the cloud called [Github Codespace](https://docs.github.com/en/codespaces/overview). No need to install anything on your own computer!
+          - text: I bet you’re eager to get your hands dirty. Let’s set up your local environment so you can start exploring the system.
+            delay: 
+          - text: At Anythink, our engineers work with a cloud-hosted IDE called [Github Codespaces](https://docs.github.com/en/codespaces/overview). 
+            delay: 2000
+          - text: :codeInstruction[[Go ahead and **create your own Codespace**.](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId})]{block=true}
+            delay: 1300
+          - text: Use the default options, and :codeInstruction[**click `Create Codespace` and wait until it boots up**.]{block=true}
             delay: 2000
           - text: Once it's up and ready you can start working directly in the browser or use VS Code to connect to the codespace in the cloud.
             delay: 3000
-          - text: :codeInstruction[[Go ahead and **create your own codespace**.](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId})]{block=true}
-            delay: 1300
-          - text: You don't need to change anything in the default options, :codeInstruction[just **click `Create Codespace` and wait until it boots up**.]{block=true}
-            delay: 2000
-          - text: It takes about a minute to boot. I'll wait with you. 
-            delay: 2000
-          - text: That's ok, you don't need to thank me. But you're welcome. 
-            delay: 2000
 trigger:
   type: github_codespace_started
   flowNode: 
@@ -43,7 +41,7 @@ trigger:
           params:
             person: head-of-rd
             messages:
-            - text: Great! Looks like your codespace is up and running. 
+            - text: Great! Looks like your Codespace is up and running. 
               delay: 1000
             - text: :instruction[You can now **run \`docker-compose up\` in your codespace's terminal** to load Anythink's backend and frontend.]{block=true}
               delay: 3000
