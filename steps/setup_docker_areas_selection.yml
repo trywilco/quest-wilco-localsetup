@@ -21,13 +21,13 @@ startFlow:
                   select_limit: 3
                   action_label: 'Submit Selection'
                   options:
-                    - value: 'frontend'
+                    - value: 'Frontend'
                       label: 'Frontend'
-                    - value: 'backend'
+                    - value: 'Backend'
                       label: 'Backend'
-                    - value: 'database'
+                    - value: 'Database'
                       label: 'Database'
-                    - value: 'devops'
+                    - value: 'DevOps'
                       label: 'DevOps'
 
 
