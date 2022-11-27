@@ -5,7 +5,7 @@ hints:
 - If you've already installed Docker on your machine, open the application and follow
   the Quick Start Guide. To run the Quick Start Guide on demand, select the Docker
   menu and then choose Quick Start Guide.
-- Make sure you ran the \`docker-compose up\` command from the **project root directory**
+- Make sure you ran the \`docker compose up\` command from the **project root directory**
   and that it finished running. This may take a few moments.
 startFlow:
   if:
@@ -22,6 +22,8 @@ startFlow:
         params:
           person: head-of-rd
           messages:
+          - text: "![](https://media.giphy.com/media/8fen5LSZcHQ5O/giphy.gif)"
+            delay: 800
           - text: I bet you’re eager to get your hands dirty. Let’s set up your local environment so you can start exploring the system.
             delay: 2000
           - text: "**So first thing’s first - :codeInstruction[install Docker](https://docs.docker.com/get-docker/).**"
@@ -44,8 +46,8 @@ trigger:
             messages:
             - text: Great!
               delay: 1000
-            - text: :instruction[You can verify docker is ready by running the following commands in your terminal- \`docker -v\` and \`docker-compose -v\`.
-                Then, **run \`docker-compose up\` from the project \`main\` directory** to load Anythink's backend and frontend.]{block:true}
+            - text: :instruction[You can verify docker is ready by running the following commands in your terminal- \`docker -v\` and \`docker compose -v\`.
+                Then, **run \`docker compose up\` from the project \`main\` directory** to load Anythink's backend and frontend.]{block:true}
               delay: 3000
             - text: This should take a few minutes, so hang tight. **I'll let you know when it's done.**
               delay: 1000
