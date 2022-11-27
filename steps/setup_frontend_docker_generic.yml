@@ -2,7 +2,7 @@ id: setup_frontend_docker_generic
 learningObjectives:
 - Setting up your local environment 
 hints:
-- run `docker-compose up` from the root directory
+- run `docker compose up` from the root directory
 - make sure the network requests in the client are complete ok using the network tab.
 startFlow:
   if:
@@ -42,10 +42,6 @@ trigger:
           params:
             person: head-of-rd
             messages:
-            - text: Great, looks like everything is working. 
+            - text: **Great, looks like everything is working.** 
               delay: 2000
-            - text: Just make sure that you **run all scripts in the next quests on
-                one of the containers** created by \`docker-compose up\`.  Also, **you
-                can use \`docker exec\` to run commands** on a running container.
-              delay: 2400
         - actionId: finish_step
