@@ -16,6 +16,8 @@ steps:
 - setup_docker_continue_codespace_generic
 - setup_docker_docker_compose_up
 - setup_frontend_docker_generic
+- setup_docker_areas_selection
+- setup_docker_skills_selection
 skills:
 - setup
 - communication
@@ -42,8 +44,6 @@ messages:
   questFinished:
     person: head-of-rd
     messages:
-    - text: Wonderful job! You've just crushed the last step of this project. 
-      delay: 1000
-    - text: We still have a lot of work ahead of us, so **[click here](${platform.home})**
-        when you're ready for your next project :)
+    - text:  Well, what are you waiting for? We have a lot of work ahead of us - so **[click here](${platform.home})**
+        when you're ready for your first project! :)
       delay: 700
