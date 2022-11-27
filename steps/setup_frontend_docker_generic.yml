@@ -42,6 +42,6 @@ trigger:
           params:
             person: head-of-rd
             messages:
-            - text: **Great, looks like everything is working.** 
+            - text: Great, looks like everything is working.
               delay: 2000
         - actionId: finish_step
