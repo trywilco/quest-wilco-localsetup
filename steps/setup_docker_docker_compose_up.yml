@@ -2,7 +2,7 @@ id: setup_docker_docker_compose_up
 hints:
 - Read through the Docker installation guide thoroughly and make sure you didn't miss
   any steps.
-- Make sure you ran the \`docker-compose up\` command from the **project root directory**
+- Make sure you ran the \`docker compose up\` command from the **project root (main) directory**
   and that it finished running. This may take a few moments.
 trigger:
   type: ping
@@ -12,6 +12,6 @@ trigger:
         params:
           person: head-of-rd
           messages:
-              - text: "Easy Peasy! The backend is up and running."
+              - text: "**Easy Peasy! The backend is up and running.**"
                 delay: 2000
       - actionId: finish_step
