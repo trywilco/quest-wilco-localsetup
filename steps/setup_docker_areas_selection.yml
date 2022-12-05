@@ -6,7 +6,7 @@ startFlow:
       params:
         person: head-of-rd
         messages:
-          - text: "![](https://media.giphy.com/media/udfgxip30ltcgDxuZX/giphy.gif)"
+          - text: "![](https://media.giphy.com/media/2LyrdEwjgCzXUO3DNV/giphy.gif)"
             delay: 2000
           - text: "Well then, It's almost time for your first official task, and I want to make sure it's a good one!"
             delay: 2000
