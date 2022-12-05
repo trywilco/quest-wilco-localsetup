@@ -50,6 +50,5 @@ messages:
       delay: 300
     - text: 🦖
       delay: 300
-    - text:  **[click here](${platform.home})**
-        when you're ready for your first project! :)
-      delay: 700
+    - text:  **[click here](${platform.home})** when you're ready for your first project! :)
+      delay: 1800
