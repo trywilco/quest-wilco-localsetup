@@ -44,6 +44,12 @@ messages:
   questFinished:
     person: head-of-rd
     messages:
-    - text:  Well, what are you waiting for? We have a lot of work ahead of us - so **[click here](${platform.home})**
+    - text:  Wonderful! It is time to start your future with Anythink 
+      delay: 1500
+    - text: 🛸
+      delay: 300
+    - text: 🦖
+      delay: 300
+    - text:  **[click here](${platform.home})**
         when you're ready for your first project! :)
       delay: 700
