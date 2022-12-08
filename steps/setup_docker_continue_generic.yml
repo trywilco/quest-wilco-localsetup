@@ -24,11 +24,15 @@ startFlow:
           messages:
           - text: "![](https://media.giphy.com/media/8fen5LSZcHQ5O/giphy.gif)"
             delay: 800
-          - text: I bet you’re eager to get your hands dirty. Let’s set up your local environment so you can start exploring the system.
+          - text: I bet you’re eager to get your hands dirty, but first thing first - clone your [repository](${user.repository}) - :instruction[clone it, don't fork it!]
             delay: 2000
-          - text: "**So first thing’s first - :codeInstruction[install Docker](https://docs.docker.com/get-docker/).**"
+          - text: "Oh, and if you've never cloned a repository before, [here's a helpful reference](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)."
+            delay: 1300
+          - text:  "**Then, and only after that** - you can set up your local environment and start exploring the system"
+            delay: 4000
+          - text: " - you can do that by :instruction[installing Docker](https://docs.docker.com/get-docker/)."
             delay: 5500
-          - text: Write me back when you're done. 
+          - text: "**Let me know when you're done** with the installation."
             delay: 3000
 trigger:
   type: user_message
