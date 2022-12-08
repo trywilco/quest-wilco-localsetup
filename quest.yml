@@ -46,9 +46,5 @@ messages:
     messages:
     - text:  Wonderful! It is time to start your future with Anythink 
       delay: 1500
-    - text: 🛸
-      delay: 300
-    - text: 🦖
-      delay: 300
     - text: "**[click here](${platform.home})** when you're ready for your first project! :)"
       delay: 1800
