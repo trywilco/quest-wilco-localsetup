@@ -24,7 +24,7 @@ startFlow:
           messages:
           - text: "![](https://media.giphy.com/media/8fen5LSZcHQ5O/giphy.gif)"
             delay: 800
-          - text: I bet you’re eager to get your hands dirty, but first thing first - clone your [repository](${user.repository}) - :instruction[clone it, don't fork it!]
+          - text: I bet you’re eager to get your hands dirty, but first thing first - :instruction[clone your [repository](${user.repository})] - **clone it, don't fork it!**
             delay: 2000
           - text: "Oh, and if you've never cloned a repository before, [here's a helpful reference](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)."
             delay: 1300
