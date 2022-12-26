@@ -8,7 +8,7 @@ summary: |-
   That's all for now, The system is working locally, and you have everything you need to continue. We hope the Docker setup helped make it easier to set everything up without installing and configuring many parts.
 slogan: Does it work on your machine?
 shouldResetRepo: false
-duration: 1
+duration: 0.0833
 questDependency: onboarding
 solutionBranch: quest_solution/docker_localsetup
 steps:
