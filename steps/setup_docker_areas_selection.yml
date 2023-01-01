@@ -8,7 +8,7 @@ startFlow:
         messages:
           - text: "It's almost time for your first official task, and I want to make sure it's a good one!"
             delay: 2000
-          - text: "That's why, I think this is a good time to decide :instruction[**what would you like to work on, when joining Anythink?**] (*you can choose multiple options, obviously*)"
+          - text: "That's why, I think this is a good time to decide :instruction[**what would you like to work on, here at Anythink?**] (*you can choose multiple options, obviously*)"
             delay: 2000
           - components:
               - type: form
