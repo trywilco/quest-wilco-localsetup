@@ -25,7 +25,5 @@ messages:
       delay: 1000
     - text: Well, I hope you are, Carl certainly wasn't. Poor Carl.
       delay: 2000
-    - text: "**Now, are you ready for your first project?**"
+    - text: "**Now, I believe it's time for your first project!**"
       delay: 3000
-      components:
-        - type: schedule_learning_time
