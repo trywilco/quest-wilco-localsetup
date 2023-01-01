@@ -1,23 +1,20 @@
 id: docker_localsetup
 level: beginner
 title: Setup
-description: Your tools are lying before you; it’s time to see if they’re sharp and
-  ready for work. We’ll set up a local environment, verify that its backend and frontend
-  are connected and create a test user.
-summary: |-
-  That's all for now, The system is working locally, and you have everything you need to continue. We hope the Docker setup helped make it easier to set everything up without installing and configuring many parts.
-slogan: Does it work on your machine?
-shouldResetRepo: false
+description: "It’s time to set things up!\nThis quest is so straightforward we really could’ve gone with just the first sentence, but that wouldn’t have looked good visually, so here's a bit more text. Yes, now it's the perfect length. Anyway, go do the quest. Your adventure begins now!"
+summary: "That’s it; you’re now officially part of ${companyName} and have everything you need: Snack to communicate with your co-workers and Github repository to access the system that we’re going to work on.\nWe hope you’re excited as we are and ready to start your Wilco journey!"
+slogan: Our Journey Begins...
 duration: 0.0833
 questDependency: onboarding
 solutionBranch: quest_solution/docker_localsetup
 steps:
-- setup_docker_continue_generic
-- setup_docker_continue_codespace_generic
-- setup_docker_docker_compose_up
-- setup_frontend_docker_generic
+- setup_docker_framework_selection
+- setup_docker_githubsetup
+- setup_docker_accept_invite
+- setup_docker_approve_notifications
 - setup_docker_areas_selection
 - setup_docker_skills_selection
+- setup_docker_create_codespace
 skills:
 - setup
 - communication
@@ -25,26 +22,12 @@ skills:
 - frontend
 - database
 messages:
-  questStarted:
-    person: head-of-rd
-    messages:
-    - text: "![](https://i.giphy.com/media/dNvaBfoxWSowUpATQW/giphy.gif)"
-      delay: 0
-    - text: Hey again!
-      delay: 1000
-    - text: 'First thing first, please **run the following command** on your repo:
-        \`${scriptCommand}\`, and **let me know** once **you''re done**.'
-      delay: 1600
-  questStartedNotReady:
-    person: devops
-    messages:
-    - text: Umm, having a problem? Email me at support@anythink.family, in case you
-        need some urgent help.
-      delay: 0
   questFinished:
     person: head-of-rd
     messages:
-    - text:  Wonderful! It is time to start your future with Anythink 
-      delay: 1500
-    - text: "**[click here](${platform.home})** when you're ready for your first project! :)"
-      delay: 1800
+    - text:  "Great! 😊 You're now officially prepared for anything we might throw at you."
+      delay: 1000
+    - text: Well, I hope you are, Carl certainly wasn't. Poor Carl.
+      delay: 2000
+    - text: "**Now, I believe it's time for your first project!**"
+      delay: 3000

@@ -1,0 +1,58 @@
+id: setup_docker_framework_selection
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: head-of-rd
+        messages:
+          - text: "![](https://media.giphy.com/media/udfgxip30ltcgDxuZX/giphy.gif)"
+            delay: 2000
+          - text: "Hey ${user.firstName},"
+            delay: 1500
+          - text: "Welcome to ${companyName}!"
+            delay: 1400
+          - text: "I'm Vanessa, but you can call me Ness, or Nessie, or Mom —but that would be awkward."
+            delay: 2200
+          - text: "I'm the Head of R&D here at ${companyName}, and I’ll be your manager."
+            delay: 2200
+          - text: "Our first order of business is making sure you're working with the right stack!"
+            delay: 2500
+          - text: So tell me, **which backend technology do you prefer to work with?**
+            delay: 2300
+          - components:
+              - type: form
+                form:
+                  id: backend_selection
+                  type: single_select_form
+                  randomized: true
+                  select_limit: 1
+                  options:
+                    - value: 'rails'
+                      label: 'rails'
+                    - value: 'node'
+                      label: 'node'
+                    - value: 'python'
+                      label: 'python'
+trigger:
+  type: chat_form_submitted
+  params:
+    formId: backend_selection
+  flowNode:
+    do:
+      - actionId: update_user_props
+        params:
+          field: "frameworks.backend"
+          value: "${{formSubmission}}"
+      - actionId: bot_message
+        params:
+          person: head-of-rd
+          messages:
+            - text: "Excellent!"
+              delay: 1300
+            - text: "Now, let's make sure you meet the rest of the team :)"
+              delay: 1500
+            - text: "It might take them some time to introduce themselves, but **${bots['devops'].displayName} will reach out shortly** and help you with the set up process,"
+              delay: 4000
+            - text: "so keep an eye out for his :instruction[**message in the left-hand conversations panel**]"
+      - actionId: finish_step

@@ -1,0 +1,55 @@
+id: setup_docker_approve_notifications
+hints: []
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: head-of-rd
+        messages:
+          - text: https://media.giphy.com/media/2LyrdEwjgCzXUO3DNV/giphy.gif
+            delay: 4500
+          - text: "Great! Now, I know you're eager to start working, but first, I recommend you :instruction[**approve Anythink browser notifications**] to ensure you won’t miss any messages from your teammates."
+            delay: 2500
+          - text: "Promise we'll never use it for spam or any other questionable purpose (that's what our emails are for)"
+            delay: 4500
+          - components:
+              - type: form
+                form:
+                  id: approve_notification
+                  type: single_select_form
+                  options:
+                    - label: Approve notifications
+                      value: approve
+                      action: REQUEST_WEB_NOTIFICATION_PERMISSION
+                      variant: primary
+                    - label: Remind me later
+                      value: decline
+                      variant: secondary
+trigger:
+  type: chat_form_submitted
+  flowNode:
+    if:
+      conditions:
+        - conditionId: text_contains_strings
+          params:
+            text: "${{formSubmission}}"
+            strings:
+              - approve
+      then:
+        do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+                - text: "*You chose well, young grasshopper 🦗✨*"
+                  delay: 2000
+          - actionId: finish_step
+      else:
+        do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+                - text: Fine then, we'll ask you this question again someday and you'll have an opportunity to rethink your life choices.
+                  delay: 2500
+          - actionId: finish_step
