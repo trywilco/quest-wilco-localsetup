@@ -1,6 +1,4 @@
 id: setup_docker_accept_invite
-learningObjectives:
-  - Cloning a Github repository
 startFlow:
   if:
     conditions:

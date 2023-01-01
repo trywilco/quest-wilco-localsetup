@@ -1,4 +1,6 @@
 id: setup_docker_create_codespace
+learningObjectives:
+  - Setting up Github Codespace
 hints:
   - Make sure your Codespace has started and is ready to use.
 startFlow:

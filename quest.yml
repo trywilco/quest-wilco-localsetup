@@ -17,9 +17,6 @@ steps:
 skills:
 - setup
 - communication
-- backend
-- frontend
-- database
 messages:
   questFinished:
     person: head-of-rd
