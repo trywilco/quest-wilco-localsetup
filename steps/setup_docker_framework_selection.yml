@@ -18,6 +18,10 @@ startFlow:
             delay: 2200
           - text: "Our first order of business is making sure you're working with the right stack!"
             delay: 2500
+          - text: "You should probably know that here at Anythink we use **ReactJS** as our Frontend framework,"
+              delay: 1500
+          - text: "But as a bonus from management, you get to choose your own backend technology!"
+              delay: 1500
           - text: So tell me, **which backend technology do you prefer to work with?**
             delay: 2300
           - components:
