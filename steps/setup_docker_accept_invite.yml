@@ -1,0 +1,36 @@
+id: setup_docker_accept_invite
+startFlow:
+  if:
+    conditions:
+      - conditionId: github_is_repo_collaborator
+    then:
+      do:
+        - actionId: bot_message
+          params:
+            person: devops
+            messages:
+              - text: "Ok, nice. Now :instruction[**talk to ${bots['head-of-rd'].displayName} again**], she’ll take it from here."
+                delay: 2500
+        - actionId: finish_step
+    else:
+      do:
+        - actionId: bot_message
+          params:
+            person: devops
+            messages:
+              - text: "Go ahead and :instruction[[**accept your invitation to the Anythink repository.**](${user.repository}/invitations)]"
+                delay: 1700
+              - text: Oh, and if your link expires, just write back and ask me to :input[send another invite]{text="Send me another invite"}.
+                delay: 2400
+trigger:
+  type: github_user_connected
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: devops
+          messages:
+            - text: "Good. Now :instruction[**talk to ${bots['head-of-rd'].displayName} again**], she’ll take it from here."
+              delay: 1500
+      - actionId: finish_step
+

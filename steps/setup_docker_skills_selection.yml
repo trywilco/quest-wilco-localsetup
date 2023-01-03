@@ -6,8 +6,8 @@ startFlow:
     params:
       person: head-of-rd
       messages:
-        - text: "Sounds good! **What specific skills do you want to focus on?** (choose up to 3)"
-          delay: 2300
+        - text: "Sounds good! and :instruction[**what specific skills do you want to focus on?**] (*choose up to 3*)"
+          delay: 500
         - components:
             - type: form
               form:
@@ -44,11 +44,5 @@ trigger:
       params:
         field: "onboarding.skills"
         value: "${{formSubmission}}"
-    - actionId: bot_message
-      params:
-        person: head-of-rd
-        messages:
-          - text: "You chose well, young grasshopper 🦗✨ "
-            delay: 2000
     - actionId: finish_step
 
