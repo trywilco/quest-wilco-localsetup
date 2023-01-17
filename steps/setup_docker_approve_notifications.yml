@@ -42,7 +42,7 @@ trigger:
               person: head-of-rd
               messages:
                 - text: "*You chose well, young grasshopper 🦗✨*"
-                  delay: 1000
+                  delay: 500
           - actionId: finish_step
       else:
         do:
