@@ -11,7 +11,7 @@ startFlow:
           - text: "Great! Now, I know you're eager to start working, but first, I recommend you :instruction[**approve Anythink browser notifications**] to ensure you won’t miss any messages from your teammates."
             delay: 2500
           - text: "Promise we'll never use it for spam or any other questionable purpose (that's what our emails are for)"
-            delay: 4500
+            delay: 3000
           - components:
               - type: form
                 form:
@@ -42,7 +42,7 @@ trigger:
               person: head-of-rd
               messages:
                 - text: "*You chose well, young grasshopper 🦗✨*"
-                  delay: 2000
+                  delay: 1000
           - actionId: finish_step
       else:
         do:
@@ -51,5 +51,5 @@ trigger:
               person: head-of-rd
               messages:
                 - text: Fine then, we'll ask you this question again someday and you'll have an opportunity to rethink your life choices.
-                  delay: 2500
+                  delay: 1000
           - actionId: finish_step
