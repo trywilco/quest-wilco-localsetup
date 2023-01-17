@@ -30,5 +30,5 @@ trigger:
           person: head-of-rd
           messages:
             - text: "**Amazing! Looks like your codespace is up and running.**"
-              delay: 3000
+              delay: 1500
       - actionId: finish_step
