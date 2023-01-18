@@ -6,6 +6,7 @@ summary: "That’s it; you’re now officially part of ${companyName} and have e
 slogan: Our Journey Begins...
 duration: 0.0833
 solutionBranch: quest_solution/docker_localsetup
+questDependency: null
 shouldResetRepo: false
 steps:
 - setup_docker_framework_selection
