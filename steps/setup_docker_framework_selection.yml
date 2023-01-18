@@ -53,10 +53,10 @@ trigger:
           person: head-of-rd
           messages:
             - text: "Excellent!"
-              delay: 1300
+              delay: 500
             - text: "Now, let's make sure you meet the rest of the team :)"
               delay: 1500
             - text: "It might take them some time to introduce themselves, but **${bots['devops'].displayName} will reach out shortly** and help you with the set up process,"
-              delay: 4000
+              delay: 2300
             - text: "so keep an eye out for his :instruction[**message in the left-hand conversations panel**]"
       - actionId: finish_step
