@@ -5,7 +5,6 @@ description: "It’s time to set things up!\nThis quest is so straightforward we
 summary: "That’s it; you’re now officially part of ${companyName} and have everything you need: Snack to communicate with your co-workers and Github repository to access the system that we’re going to work on.\nWe hope you’re excited as we are and ready to start your Wilco journey!"
 slogan: Our Journey Begins...
 duration: 0.0833
-solutionBranch: quest_solution/docker_localsetup
 questDependency: null
 shouldResetRepo: false
 steps:
