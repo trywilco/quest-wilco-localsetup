@@ -12,7 +12,7 @@ startFlow:
           - text: "![](https://media.giphy.com/media/8fen5LSZcHQ5O/giphy.gif)"
             delay: 800
           - text: I bet you’re eager to get your hands dirty. Let’s **set up your development environment** so you can start exploring the system.
-            delay:
+            delay: 1000
           - text: At Anythink, our engineers work with [Github Codespaces](https://docs.github.com/en/codespaces/overview), which can be run directly in Github, so you don't need to install anything on your computer!
             delay: 2000
           - text: :Instruction[Go ahead and[ **create your own Codespace**.](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=${user.repoId})]{block=true}

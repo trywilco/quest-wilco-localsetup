@@ -1,6 +1,6 @@
 id: docker_localsetup
 level: beginner
-title: Setup
+title: Set things up to start enjoying Wilco quests
 description: "It’s time to set things up!\nThis quest is so straightforward we really could’ve gone with just the first sentence, but that wouldn’t have looked good visually, so here's a bit more text. Yes, now it's the perfect length. Anyway, go do the quest. Your adventure begins now!"
 summary: "That’s it; you’re now officially part of ${companyName} and have everything you need: Snack to communicate with your co-workers and Github repository to access the system that we’re going to work on.\nWe hope you’re excited as we are and ready to start your Wilco journey!"
 slogan: Our Journey Begins...
