@@ -1,0 +1,30 @@
+id: setup_run_frontend
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: head-of-rd
+      messages:
+        - text: "Our frontend application is a single page application using React."
+          delay: 1500
+        - text: "To run it, we need to install the dependencies and start the development server."
+          delay: 2500
+        - text: "Go to the root of the repository and run `yarn install` to install the dependencies."
+          delay: 2500
+        - text: "Once the dependencies are installed, you can run the frontend by running `yarn start`, and this will automatically advance you to the next step."
+          delay: 2500
+
+trigger:
+  type: user_event
+  params:
+    event: service_load
+  flowNode:
+    if: 
+      conditions:
+      - conditionId: text_match_regex
+        params:
+          text: "${eventMetadata.service}"
+          regex: "wilco-frontend"
+      then:
+        do: 
+          - actionId: finish_step

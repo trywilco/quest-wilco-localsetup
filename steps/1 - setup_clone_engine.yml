@@ -1,0 +1,41 @@
+id: setup_clone_engine
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: head-of-rd
+      messages:
+        - text: "Let's start by cloning the Wilco engine repository. Check that you have access to the repository [here](https://github.com/trywilco/wilco-engine), or contact IT otherwise."
+          delay: 2500
+        - text: "You can do this by running the following command in your terminal:"
+          delay: 2500
+        - text: |
+            ```
+            git@github.com:trywilco/wilco-engine.git
+            ```
+        - text: "Once you've cloned the repository, let me know you're ready and we can continue with the next step."
+          delay: 2500
+
+trigger:
+  type: user_message
+  params:
+    person: head-of-rd
+  flowNode:
+    if:
+      conditions:
+        - conditionId: is_user_message_text_ready_to_continue
+      then:
+        do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+              - text: Awsome, let's continue to the next step!
+          - actionId: finish_step
+      else:
+        do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+              - text: OK, let me know when you're done or if you need any help.

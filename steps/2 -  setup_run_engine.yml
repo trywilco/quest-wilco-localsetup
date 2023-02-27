@@ -1,0 +1,36 @@
+id: setup_run_engine
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: head-of-rd
+      messages:
+        - text: "Now that you have the engine repository cloned, we need to run it."
+          delay: 1500
+        - text: "Our database and Redis can be quickly set up using Docker. Go to the root of the repository and run `docker-compose up -d`"
+          delay: 2500
+        - text: "Once the databases are up, you can run the engine by running `yarn run dev`, and this will automatically advance you to the next step."
+          delay: 2500
+        - text: "If you have any additional questions, you can check out the [local environment setup guide](https://www.notion.so/trywilco/Local-Env-Setup-481852b389ed42498a73ba9ab82b159a?pvs=4)."
+          delay: 2500
+
+trigger:
+  type: user_event
+  params:
+    event: service_load
+  flowNode:
+    if: 
+      conditions:
+      - conditionId: text_match_regex
+        params:
+          text: "${eventMetadata.service}"
+          regex: "wilco-engine"
+      then:
+        do: 
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+                - text: "That's great, now that the engine is up, we can continue with the frontend service"
+                  delay: 1500
+          - actionId: finish_step
