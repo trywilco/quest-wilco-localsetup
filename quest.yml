@@ -1,28 +1,29 @@
-id: docker_localsetup
+id: wilco_local_setup
 level: beginner
-title: Set things up to start enjoying Wilco quests
-description: "It’s time to set things up!\nThis quest is so straightforward we really could’ve gone with just the first sentence, but that wouldn’t have looked good visually, so here's a bit more text. Yes, now it's the perfect length. Anyway, go do the quest. Your adventure begins now!"
-summary: "That’s it; you’re now officially part of ${companyName} and have everything you need: Snack to communicate with your co-workers and Github repository to access the system that we’re going to work on.\nWe hope you’re excited as we are and ready to start your Wilco journey!"
-slogan: Our Journey Begins...
+title: Wilco Local Setup
+subtitle: Setup your local Wilco environment
+description: "Hey there! 👋\rWelcome to Wilco, we're so happy you've joined our team. We're going to get you set up with your local environment so you can start contributing to our projects."
+slogan: Welcome to Wilco!
 duration: 0.0833
 questDependency: null
 shouldResetRepo: false
 steps:
-- setup_docker_framework_selection
-- setup_docker_githubsetup
-- setup_docker_accept_invite
-- setup_docker_approve_notifications
-- setup_docker_areas_selection
-- setup_docker_skills_selection
-- setup_docker_create_codespace
+- setup_clone_engine
+- setup_run_engine
+- setup_clone_frontend
+- setup_run_frontend
 skills:
 - setup
-- communication
 messages:
+  questStarted:
+    person: head-of-rd
+    messages:
+    - text:  "Hey there! 👋"
+      delay: 1000
+    - text: "Welcome to Wilco, we're so happy you've joined our team. We're going to get you set up with your local environment so you can start contributing to our projects."
+      delay: 2500
   questFinished:
     person: head-of-rd
     messages:
-    - text:  "Great! 😊 You're now officially prepared for anything we might throw at you."
+    - text:  "Amazing job! 😊 You are now ready to start contributing to our projects. 🚀"
       delay: 1000
-    - text: Well, I hope you are, Carl certainly wasn't. Poor Carl.
-      delay: 2000
