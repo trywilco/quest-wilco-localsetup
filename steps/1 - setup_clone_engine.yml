@@ -5,6 +5,10 @@ startFlow:
     params:
       person: head-of-rd
       messages:
+        - text:  "Hey there! 👋"
+          delay: 1000
+        - text: "Welcome to Wilco, we're so happy you've joined our team. We're going to get you set up with your local environment so you can start contributing to our projects."
+          delay: 2500
         - text: "Let's start by cloning the Wilco engine repository. Check that you have access to the repository [here](https://github.com/trywilco/wilco-engine), or contact IT otherwise."
           delay: 2500
         - text: "You can do this by running the following command in your terminal:"
