@@ -9,7 +9,7 @@ startFlow:
           delay: 1500
         - text: "Our database and Redis can be quickly set up using Docker. Go to the root of the repository and run `docker-compose up -d`"
           delay: 2500
-        - text: "Once the databases are up, you can run the engine by running `yarn run dev`, and this will automatically advance you to the next step."
+        - text: "Once the databases are up, you can run the engine by running `WILCO_ID=${user.id} yarn run dev`, and this will automatically advance you to the next step."
           delay: 2500
         - text: "If you have any additional questions, you can check out the [local environment setup guide](https://www.notion.so/trywilco/Local-Env-Setup-481852b389ed42498a73ba9ab82b159a?pvs=4)."
           delay: 2500

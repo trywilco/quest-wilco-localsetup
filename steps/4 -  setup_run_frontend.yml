@@ -11,7 +11,7 @@ startFlow:
           delay: 2500
         - text: "Go to the root of the repository and run `yarn install` to install the dependencies."
           delay: 2500
-        - text: "Once the dependencies are installed, you can run the frontend by running `yarn start`, and this will automatically advance you to the next step."
+        - text: "Once the dependencies are installed, you can run the frontend by running `WILCO_ID=${user.id} yarn start`, and this will automatically advance you to the next step."
           delay: 2500
 
 trigger:
