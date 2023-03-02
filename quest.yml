@@ -6,7 +6,7 @@ description: "Hey there! 👋\rWelcome to Wilco, we're so happy you've joined ou
 slogan: Welcome to Wilco!
 duration: 0.0833
 questDependency: null
-shouldResetRepo: false
+repository: null
 steps:
 - setup_clone_engine
 - setup_run_engine
