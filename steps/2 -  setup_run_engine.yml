@@ -1,4 +1,6 @@
 id: setup_run_engine
+learningObjectives:
+  - Setup Node.js and get the backend running
 startFlow:
   do:
   - actionId: bot_message
