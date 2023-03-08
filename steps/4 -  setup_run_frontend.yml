@@ -1,4 +1,6 @@
 id: setup_run_frontend
+learningObjectives:
+  - Setup React and get the frontend running
 startFlow:
   do:
   - actionId: bot_message

@@ -1,4 +1,6 @@
 id: setup_clone_engine
+learningObjectives: 
+  - Access GitHub and clone Wilco's repositories
 startFlow:
   do:
   - actionId: bot_message
